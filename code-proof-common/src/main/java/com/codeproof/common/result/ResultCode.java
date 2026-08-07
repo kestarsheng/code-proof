@@ -1,5 +1,7 @@
 package com.codeproof.common.result;
 
+import lombok.Getter;
+
 /**
  * 响应码枚举
  * 统一管理所有业务状态码和提示信息
@@ -7,6 +9,7 @@ package com.codeproof.common.result;
  * @author Liu Yuke
  * @date 2026/8/7
  */
+@Getter
 public enum ResultCode {
 
     // ========== 通用状态码 ==========
@@ -26,14 +29,6 @@ public enum ResultCode {
     ResultCode(Integer code, String message) {
         this.code = code;
         this.message = message;
-    }
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public String getMessage() {
-        return message;
     }
 
 }

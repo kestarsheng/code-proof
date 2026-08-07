@@ -60,6 +60,13 @@ public class Result<T> implements Serializable {
                 null);
     }
 
+    public static <T> Result<T> error(ResultCode resultCode) {
+        return new Result<>(
+                resultCode.getCode(),
+                resultCode.getMessage(),
+                null);
+    }
+
     public static <T> Result<T> error(ResultCode resultCode, String message) {
         return new Result<>(
                 resultCode.getCode(),
