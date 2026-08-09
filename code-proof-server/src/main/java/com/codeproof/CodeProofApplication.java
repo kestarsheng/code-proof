@@ -1,5 +1,6 @@
 package com.codeproof;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Liu Yuke
  * @date 2026/08/06
  */
+@MapperScan("com.codeproof.**.mapper")
 @SpringBootApplication
 public class CodeProofApplication {
     public static void main(String[] args) {

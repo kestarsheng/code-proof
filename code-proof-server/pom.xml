@@ -19,6 +19,12 @@
             <artifactId>code-proof-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.codeproof</groupId>
+            <artifactId>code-proof-system</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
