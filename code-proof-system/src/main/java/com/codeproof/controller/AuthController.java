@@ -1,6 +1,7 @@
 package com.codeproof.controller;
 
 import com.codeproof.common.result.Result;
+import com.codeproof.dto.LoginRequest;
 import com.codeproof.dto.RegisterRequest;
 import com.codeproof.service.AuthService;
 import jakarta.validation.Valid;
@@ -31,5 +32,11 @@ public class AuthController {
     public Result<String> register(@Valid @RequestBody RegisterRequest request) {
         authService.register(request);
         return Result.success("注册成功");
+    }
+
+    @PostMapping("/login")
+    public Result<String> login(@Valid @RequestBody LoginRequest  request) {
+        String token = authService.login(request);
+        return Result.success("登录成功",token);
     }
 }

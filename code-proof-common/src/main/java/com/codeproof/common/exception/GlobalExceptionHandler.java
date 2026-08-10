@@ -44,6 +44,15 @@ public class GlobalExceptionHandler {
     }
 
     /**
+     * 处理业务异常
+     */
+    @ExceptionHandler(BusinessException.class)
+    public Result<Void> handleBusinessException(BusinessException e) {
+        log.warn("业务异常: {}", e.getMessage());
+        return Result.error(e.getResultCode(), e.getMessage());
+    }
+
+    /**
      * 处理所有异常
      */
     @ExceptionHandler(Exception.class)

@@ -20,8 +20,12 @@ public enum ResultCode {
     BAD_REQUEST(400, "请求参数错误"),
     UNAUTHORIZED(401, "未登录或登录已过期"),
     FORBIDDEN(403, "没有权限访问该资源"),
-    NOT_FOUND(404, "请求资源不存在");
+    NOT_FOUND(404, "请求资源不存在"),
 
+    // ========== 业务错误 ==========
+    USER_NOT_EXIST(1001, "用户不存在"),
+    USER_PASSWORD_ERROR(1002, "用户名或密码错误"),
+    USER_ALREADY_EXIST(1003, "用户已存在");
 
     private final Integer code;
     private final String message;
